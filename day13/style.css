@@ -1,0 +1,60 @@
+body{
+    font-family: fantasy;
+    background-color: rgb(112, 175, 218);
+    color: #333; 
+}
+ul{
+    list-style-type: 1px solid grey;
+    border: 1px solid black;
+    border-left-color: chartreuse;
+}
+ul li{
+    border-bottom: 1px solid black;
+    background-color: #e29504;
+}
+ol{
+    background: hsl(69, 72%, 52%);
+    list-style-type: upper-roman;
+     /* padding: 5px; */
+}
+ol li{
+    background: #e75d00;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+table{
+    /* border-collapse: collapse; */
+}
+td,th{
+    border: 1px solid lime;
+    padding: 5px;
+
+
+}
+
+tbody tr:nth-child(odd){
+    background-color: #0ce73b;
+}
+
+tbody tr:nth-child(even){
+    background-color: hsl(76, 87%, 47%);
+}
+
+div{
+    overflow: scroll;
+    background-color: #e60eb0;
+    width: 500px;
+    height: 200px;
+}
+div{
+    overflow: scroll;
+    background-color: #e29504;
+    width: 200px;
+    height: 200px;
+}
+#table{
+    background-color: #e75d00;
+    width: auto;
+    height: auto;
+}
