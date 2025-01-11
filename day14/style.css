@@ -1,0 +1,76 @@
+/* descendant combinator - selcet elements inside other elements (like a parent) */
+article p{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+    
+/* 2. child combinator (>) - selects direct children inside an element */
+article > p{
+    background-color: red;
+}
+
+/* 3. general sibling combinator (~) - selects all siblings after an element */
+article ~ p{
+    background-color: crimson;
+    color: white;
+    padding: 20px;
+}
+
+/* 4. adjacent sibling combinator (+) - selcets the next sibling after an element */
+article + p{
+    background-color: tomato;
+}
+
+/* :first-child - pseudo class we use it when we want to style the first
+element  */
+h1:first-child{
+    background-color: chartreuse;
+    color: white;
+    padding: 20px;
+}
+
+input{
+    width: 50%;
+}
+input:in-range{
+    border: 3px solid red;
+}
+input:out-of-range{
+    border:3px solid yellow
+}
+input:required{
+    background-color: blueviolet;
+}
+input:focus{
+    background-color: yellowgreen;
+}
+
+input[name="name"]:invalid{
+    border: 5px solid red;
+}
+
+span:first-of-type{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+#p1::first-line{
+    background: white;
+    color:blue;
+    font-size: 40px;
+}
+#p1::before{
+      content: url(download.jpg);
+      width: 20px;
+      height: 20px;
+}
+
+ ::selection{
+    color: black;
+    background: beige;
+}
+div{
+    opacity: 0.5;
+}
