@@ -1,0 +1,130 @@
+div#translate{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    transform: translate(100px,50px);
+    padding: 10px;
+}
+div#rotate{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: white;
+    background-color: red;
+    transform: rotate(180deg);
+    padding: 10px;
+    margin-top: 100px;
+}
+div#scale{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: black;
+    background-color: crimson;
+    transform: scale(0.7,0.7);
+    padding: 10px;
+    margin-top: 100px;
+}
+div#scalex{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: black;
+    background-color: crimson;
+    transform: scaleX(2);
+    padding: 10px;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+div#scaley{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgba(76, 224, 205, 0.897);
+    transform: scaleY(2);
+    padding: 10px;
+    margin-top: 150px;
+    margin-left: 200px;
+}
+div#skewx{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgba(231, 77, 5, 0.897);
+    transform: skewX(-40deg);
+    padding: 10px;
+    margin-top: 300px;
+    margin-left: 200px;
+}
+div#skewy{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: black;
+    background-color: rgba(54, 204, 8, 0.897);
+    transform: skewY(-40deg);
+    padding: 10px;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+div#rotatex{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(43, 46, 209, 0.897);
+    transform: rotateX(130deg);
+    padding: 10px;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+div#rotatey{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(43, 46, 209, 0.897);
+    transform: rotateY(130deg);
+    padding: 10px;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+div#rotatez{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(43, 46, 209, 0.897);
+    transform: rotateZ(130deg);
+    padding: 10px;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+div#transition{
+    width: 200px;
+    height: 200px;
+    background: red;
+    transition: background 3s,border-radius 5s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+}
+div#transition:hover{
+    background: black;
+    border-radius: 50%;
+}
+div#transition2{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    background: aqua ;
+    transition: .3s ease-in-out;
+}
+div#transition2:hover{
+    background: gold;
+    transform: scale(1.3);
+    filter: grayscale(0);
+}
