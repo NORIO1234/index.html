@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container"></div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -14,10 +15,17 @@
             <li><a href="contact.html">Contact</a></li>
             <li><a href="service.html">Service</a></li>
             <li><a href="log.html">Log</a></li>
-
         </ul>
     </nav>
-    <h1>Rreth nesh!</h1>
-    <p>Ne gjendemi ne prishtin perball grandit.ne ofrojm ushqim me cilesi te lart dhe me shume te shendetshme.</p>
+    <div id="contact-form">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+    </div>
+    <div class="form-row">
+        <textarea name="message" placeholder="Your Message"></textarea>
+    </div>
+    <div class="form-row">
+        <input type="submit" class="big-button" value="Send Message">
+    </div>
 </body>
 </html>

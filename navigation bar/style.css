@@ -1,44 +1,56 @@
-ul{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #00016e;
+    background-color: #007bff; /* Updated to a more vibrant color */
+    transition: background-color 0.3s ease; /* Added transition for smooth effect */
 }
+
 li{
     float: left;
 }
-li a{
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 18px 20px;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for hover effects */
 }
-li a:hover:not(.active){
-    background-color: lightpink;
+
+li a:hover:not(.active) {
+    background-color: #0056b3; /* Updated hover color for better visibility */
+    color: #fff; /* Ensured text color remains white on hover */
 }
-.active{
-    background-color: rgb(79, 112, 152);
+
+.active {
+    background-color: #0056b3; /* Updated active color for consistency */
 }
-li ul{
+
+li ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #00016e;
+    background-color: #007bff; /* Updated dropdown background color */
     padding: 0;
     min-width: 160px;
+    transition: all 0.3s ease; /* Added transition for dropdown */
 }
+
 li ul li{
     float: none;
 }
-li ul li a
-    {padding:10px 16px;
+li ul li a {
+    padding: 10px 16px;
+    transition: background-color 0.3s ease; /* Added transition for dropdown links */
 }
-li ul li a:hover{
-    background-color: beige;
+
+li ul li a:hover {
+    background-color: #f8f9fa; /* Updated hover color for dropdown links */
 }
+
 
 li:hover >ul{
     display: block;
