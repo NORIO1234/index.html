@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="work.css">
 </head>
 <body>
     <div class="container"></div>
@@ -21,6 +21,65 @@
         <h1>Our Work</h1>
         <p>Details about the work we do.</p>
     </header>
-
+    <section id="work">
+        <div class="container">
+            <h2>Shërbimet dhe Projektet</h2>
+            <p>Restoranti ynë ofron një gamë shërbimesh për t'ju siguruar një përvojë të paharrueshme. Qoftë për një drekë të thjeshtë, një darkë të mrekullueshme, apo për organizimin e ngjarjeve speciale, ne jemi këtu për t'ju ofruar shërbimin më të mirë.</p>
+    
+            <h3>Shërbimet që ofrojmë:</h3>
+            <ul>
+                <li><strong>Catering për Evente</strong> – Ne ofrojmë catering për ngjarje speciale si dasma, festa, dhe konferenca. Mund të personalizoni menu për çdo lloj ngjarjeje.</li>
+                <li><strong>Menu Speciale</strong> – Çdo ditë, ne ofrojmë menu speciale me ushqime të përgatitura me përbërës të freskët dhe me shumë shije.</li>
+                <li><strong>Organizimi i Banketëve</strong> – Restoranti ynë mund të ofrojë shërbimin e plotë për banketë, duke përfshirë ushqimin dhe shërbimin profesional.</li>
+                <li><strong>Evente Muzikore dhe Live</strong> – Në restorantin tonë mund të kënaqeni me ngjarje muzikore dhe live çdo fundjavë.</li>
+            </ul>
+    
+            <h3>Galeria e Punëve</h3>
+            <p>Shihni disa nga eventet dhe shërbimet tona më të fundit:</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="event1.jpg" alt="Event i organizuar">
+                    <p>Ngjarje speciale: Dasma me shërbim catering</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="event2.jpg" alt="Shërbimi i ushqimit">
+                    <p>Menu speciale për banketin e vitit të ri</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="event3.jpg" alt="Mbrëmje muzikore">
+                    <p>Mbrëmje muzikore me këngëtar të njohur</p>
+                </div>
+            </div>
+    
+            <h3>Testimoniale të Klientëve</h3>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Përvoja ime në këtë restorant ishte fantastike! Ushqimi ishte i shijshëm dhe shërbimi ishte i shpejtë dhe i kujdesshëm. Do t'ju rekomandoj gjithmonë!"</p>
+                    <p>- Ema, klient</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Restoranti organizoi ngjarjen time të dasmës dhe gjithçka ishte perfekte. Ushqimi, shërbimi dhe atmosfera ishin të jashtëzakonshme. Faleminderit!"</p>
+                    <p>- Dritan, klient</p>
+                </div>
+            </div>
+    
+            <h3>Kontaktoni për Rezervime dhe Evente</h3>
+            <p>Për të bërë një rezervim apo për të organizuar një ngjarje speciale, na kontaktoni përmes formularit më poshtë ose telefononi në numrin tonë.</p>
+    
+            <form action="submit_form.php" method="POST">
+                <label for="name">Emri</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Mesazhi</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Dërgo</button>
+            </form>
+        </div>
+    </section>
+    
 </body>
 </html>

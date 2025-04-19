@@ -17,15 +17,43 @@
             <li><a href="log.html">Log</a></li>
         </ul>
     </nav>
-    <div id="contact-form">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="email" name="email" placeholder="Your Email">
-    </div>
-    <div class="form-row">
-        <textarea name="message" placeholder="Your Message"></textarea>
-    </div>
-    <div class="form-row">
-        <input type="submit" class="big-button" value="Send Message">
-    </div>
+    <section id="contact">
+        <div class="container">
+            <h2>Kontaktoni Na</h2>
+            <p>Për çdo pyetje, rezervim ose sugjerim, ju lutem plotësoni formularin më poshtë ose na kontaktoni përmes informacionit që gjeni në këtë seksion.</p>
+    
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Adresa</h3>
+                    <p>Rruga e Ushqimit, Prishtinë, Kosova</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Telefon</h3>
+                    <p>+383 44 123 456</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>info@restoranti.com</p>
+                </div>
+            </div>
+    
+            <div class="contact-form">
+                <h3>Formulari i Kontaktit</h3>
+                <form action="#" method="POST">
+                    <label for="name">Emri:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Mesazhi juaj:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+    
+                    <button type="submit" class="submit-btn">Dërgo Mesazhin</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
 </body>
 </html>
