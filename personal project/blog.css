@@ -1,52 +1,121 @@
+/* General Styles for Blog Section */
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-#section-1 {
-    background-color: #ecd505;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
 }
 
 .container {
+    width: 50%;
+    max-width: 1200px;
     margin: 0 auto;
-    max-width: 1600px;
-    padding: 0 20px;
 }
 
-header {
-    padding: 55px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+#blog {
+    padding: 50px 0;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50; /* Dark grey text */
 }
 
-nav ul li {
-    margin-right: 20px;
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #555;
 }
 
-nav ul li a {
+/* Blog Posts */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.blog-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.blog-content {
+    margin-top: 20px;
+}
+
+.blog-content h3 {
+    font-size: 24px;
+    color: #2980b9; /* Blue color */
+    margin-bottom: 10px;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    color: #f39c12; /* Yellow color */
+    font-weight: bold;
+    margin-top: 15px;
     text-decoration: none;
-    color: #fff;
-    transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
-    color: #ccc;
+.read-more:hover {
+    text-decoration: underline;
+    color: #2980b9; /* Blue color */
 }
 
-nav ul li.active {
-    background-color: #0e3edb98;
-    border-radius: 5px;
-    padding: 10px 16px;
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-heading h1 {
+        font-size: 24px;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container {
+        width: 95%;
+    }
 }
 
-/* Removed the .main-heading section */
+@media (max-width: 480px) {
+    .main-heading h1 {
+        font-size: 20px;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-content h3 {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}

@@ -3,64 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Section 1: Header and Main Heading -->
     <section id="section-1">
         <div class="container">
             <header>
-    <img src="images.jpg" width="100" alt="Company Logo">
+                <img src="images.jpg" width="100" alt="Company Logo">
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="blog.html">Blog</a></li>>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-</div>
-</section >
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="work.html">Work</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="main-heading">
+                <h1>Pershendetje ne jemi nje nga restaurantet me te mira ne prishtin, ne ofrojm ushqim me cilesi te lart dhe me shume te shendetshme.</h1>
+                <a href="contact.html">Rezervo tani!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Contact Information and Contact Form -->
     <section id="contact">
         <div class="container">
             <h2>Kontaktoni Na</h2>
             <p>Për çdo pyetje, rezervim ose sugjerim, ju lutem plotësoni formularin më poshtë ose na kontaktoni përmes informacionit që gjeni në këtë seksion.</p>
-    
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Adresa</h3>
-                    <p>Rruga e Ushqimit, Prishtinë, Kosova</p>
+
+
+
+                <!-- Contact Form Side -->
+                <div class="contact-form">
+                    <h3>Formulari i Kontaktit</h3>
+                    <form action="#" method="POST">
+                        <label for="name">Emri:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Mesazhi juaj:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button type="submit" class="submit-btn">Dërgo Mesazhin</button>
+                    </form>
                 </div>
-                <div class="contact-item">
-                    <h3>Telefon</h3>
-                    <p>+383 44 123 456</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p>info@restoranti.com</p>
-                </div>
-            </div>
-    
-            <div class="contact-form">
-                <h3>Formulari i Kontaktit</h3>
-                <form action="#" method="POST">
-                    <label for="name">Emri:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="message">Mesazhi juaj:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-    
-                    <button type="submit" class="submit-btn">Dërgo Mesazhin</button>
-                </form>
             </div>
         </div>
     </section>
-    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.google.com">Google</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

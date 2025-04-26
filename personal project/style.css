@@ -16,12 +16,12 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1600px;
+    max-width:1800px;
     padding: 0 20px;
 }
 
 header {
-    padding: 55px;
+    padding: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,11 +160,19 @@ nav ul li.active {
 
 .form-row {
     display: flex;
+    justify-content: center; /* Center align the items horizontally */
+    gap: 20px; /* Optional: Adds spacing between form elements */
+    width: 100%; /* Ensure it takes the full width of the parent container */
 }
 
-input[type="text"], input[type="email"] {
-    width: 46%;
+input[type="text"], input[type="email"], textarea {
+    width: 100%;  /* Make input and textarea full-width */
+    max-width: 46%;  /* Make sure input fields don't exceed 46% of parent container */
     height: 56px;
+}
+
+textarea {
+    height: 150px;  /* Adjust height for textarea */
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -174,7 +182,6 @@ input[type="text"], input[type="email"], textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -189,10 +196,12 @@ input[type="submit"] {
     margin-top: 60px;
     margin-bottom: 10px;
 }
-.big-button{
+
+.big-button {
     padding: 25px 85px;
     color: white;
 }
+
 footer{
     background-color: #000000;
 }

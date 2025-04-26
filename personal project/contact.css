@@ -1,52 +1,101 @@
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-#section-1 {
-    background-color: #ecd505;
-    height: 300px;
-    justify-content: center;
-    align-items: center;
+
+#contact {
+    padding: 50px 0;
+    background-color: #fff;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1600px;
-    padding: 0 20px;
+#contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-header {
-    padding: 55px;
+#contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Contact Info */
+.contact-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: #fff;
+    margin-bottom: 40px;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.contact-item {
+    width: 30%;
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+.contact-form h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-nav ul li {
-    margin-right: 20px;
+.contact-form label {
+    font-size: 1rem;
+    margin: 10px 0 5px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.2s ease;
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-nav ul li a:hover {
-    color: #ccc;
+.contact-form button {
+    width: 30%;
+    padding: 12px;
+    background-color: #e7e42d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
 }
 
-nav ul li.active {
-    background-color: #0e3edb98;
-    border-radius: 5px;
-    padding: 10px 16px;
+.contact-form button:hover {
+    background-color: #dbd834;
 }
 
-/* Removed the .main-heading section */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+    }
+}

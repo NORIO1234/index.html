@@ -1,52 +1,68 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#section-1 {
-    background-color: #ecd505;
-    height: 280px;
-    justify-content: center;
-    align-items: center;
+
+
+
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1600px;
-    padding: 0 20px;
+#about-us h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-header {
-    padding: 55px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.8;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-nav ul li {
-    margin-right: 20px;
+
+
+
+
+
+#about-us {
+    background-color: #f9f9f9;
+    padding: 40px 0;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.2s ease;
+
+#about-us h3 {
+    font-size: 28px;
+    margin-top: 30px;
 }
 
-nav ul li a:hover {
-    color: #ccc;
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    #about-us {
+        padding: 20px 0;
+    }
+
+    #about-us h2 {
+        font-size: 28px;
+    }
+    
+    #about-us h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
 
-nav ul li.active {
-    background-color: #0e3edb98;
-    border-radius: 5px;
-    padding: 10px 16px;
-}
-
-/* Removed the .main-heading section */

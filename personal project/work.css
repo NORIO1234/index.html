@@ -1,52 +1,139 @@
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-#section-1 {
-    background-color: #ecd505;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
+/* Work Section */
+#work ul {
+    padding-left: 20px;
+    line-height: 1.8;
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 1600px;
-    padding: 0 20px;
+#work ul li {
+    margin-bottom: 10px;
 }
 
-header {
-    padding: 55px;
+#work ul li strong {
+    color: #f39c12; /* Yellow color */
+}
+
+.gallery {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
-    align-items: center;
-    color: #fff;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.gallery-item {
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
 }
 
-nav ul li {
-    margin-right: 20px;
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.2s ease;
+.testimonials {
+    margin-top: 40px;
 }
 
-nav ul li a:hover {
-    color: #ccc;
+.testimonial {
+    background-color: #f9f9f9; /* Light background */
+    border-left: 5px solid #f39c12; /* Yellow color */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
-nav ul li.active {
-    background-color: #0e3edb98;
-    border-radius: 5px;
-    padding: 10px 16px;
+.testimonial p {
+    margin: 10px 0;
 }
 
-/* Removed the .main-heading section */
+.testimonial p:first-child {
+    font-style: italic;
+}
+
+.testimonial p:last-child {
+    font-weight: bold;
+    color: #f39c12; /* Yellow color */
+}
+
+/* Contact Form Styles */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #f39c12; /* Yellow color */
+    color: white;
+    font-size: 16px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #f1c40f; /* Lighter yellow color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    form button {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
