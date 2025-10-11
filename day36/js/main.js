@@ -40,6 +40,14 @@ $('#btn3').click(function(){
 })
 
 
+$('#square').click(function(){
+    $('#square').animate({
+       'left': '+=50px',
+       'opacity': 0.25,
+       'fontSize': '50px' 
+    })
+})
+
 /*
 click
 keydown
@@ -49,3 +57,12 @@ mouseout
 focus
 resize
 */
+
+
+$('#sort').sortable();
+
+$(function(){
+    $("#accordion").accordion();
+})
+
+$('#tabs').tabs();
