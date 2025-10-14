@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <title>Muslim App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Mirë se vini në Muslim App</h1>
+  <nav>
+    <button onclick="goTo('quran.html')">Lexo Kuranin</button>
+    <button onclick="goTo('abdes.html')">Si të marrësh abdes</button>
+  </nav>
+
+  <section>
+    <h2 id="prayer-title">Kohet e Namazit</h2>
+    <ul>
+      <li><span id="fajr-label">Sabahu:</span> <span id="fajr">...</span></li>
+      <li><span id="dhuhr-label">Dreka:</span> <span id="dhuhr">...</span></li>
+      <li><span id="asr-label">Ikindia:</span> <span id="asr">...</span></li>
+      <li><span id="maghrib-label">Akshami:</span> <span id="maghrib">...</span></li>
+      <li><span id="isha-label">Jacia:</span> <span id="isha">...</span></li>
+    </ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
