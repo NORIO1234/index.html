@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Revis Project Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo-link" aria-label="School Homepage">
+        <img src="shkolla-e-mesme-e-larte-gjin-gazuli-gjin-gazulli-high-school-116337.jpg" alt="School Logo" class="logo-only" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="staff.html">Staff</a></li>
+          <li><a href="downloads.html">Forms</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="revis.html">Revista</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🔐 Hidden Login Button -->
+  <div style="text-align:right; padding: 10px;">
+    <button onclick="showLogin()" style="background:none; border:none; color:#888; cursor:pointer;">🔒 Admin</button>
+  </div>
+
+  <!-- 🔐 Password Prompt -->
+  <div id="loginBox" style="display:none; padding: 20px;">
+    <input type="password" id="adminPass" placeholder="Enter admin password" style="padding:10px; width: 300px;">
+    <button onclick="checkPassword()" style="padding:10px 15px;">Login</button>
+  </div>
+
+  <!-- ✅ Post Form (Hidden by default) -->
+  <section id="revis-post" class="post-section" style="display: none; padding: 20px; background-color: #f9f9f9;">
+    <div class="container">
+      <h2>Post a Project (Revis)</h2>
+      <form id="revisForm">
+        <input type="text" id="projectTitle" placeholder="Project Title" required style="display:block; width:100%; padding:10px; margin-top:10px;">
+        <textarea id="projectDesc" rows="4" placeholder="Project Description" required style="display:block; width:100%; padding:10px; margin-top:10px;"></textarea>
+        
+        <!-- Upload Image -->
+        <label style="margin-top:10px; display:block;">Upload a Photo:</label>
+        <input type="file" id="projectImage" accept="image/*" required style="margin-bottom:10px;">
+
+        <button type="submit" style="margin-top:10px; padding:10px 20px; background-color:#4CAF50; color:white; border:none;">Post</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 📸 Project Gallery -->
+  <section id="projectGallery" style="padding: 20px; background-color: #fff;">
+    <div class="container">
+      <h2 style="margin-bottom:20px;">Project Gallery</h2>
+      <div id="gallery" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+    </div>
+  </section>
+
+  <!-- 🔧 Scripts -->
+  <script>
+    // Change this to your own password
+    const adminPassword = "revis123";
+
+    function showLogin() {
+      document.getElementById('loginBox').style.display = 'block';
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('adminPass').value;
+      if (input === adminPassword) {
+        document.getElementById('revis-post').style.display = 'block';
+        document.getElementById('loginBox').style.display = 'none';
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+
+    // Handle form submission
+    const form = document.getElementById('revisForm');
+    const gallery = document.getElementById('gallery');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('projectTitle').value;
+      const desc = document.getElementById('projectDesc').value;
+      const file = document.getElementById('projectImage').files[0];
+
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = function(event) {
+        const imgURL = event.target.result;
+
+        // Create a project card
+        const card = document.createElement('div');
+        card.style.width = '300px';
+        card.style.border = '1px solid #ccc';
+        card.style.borderRadius = '8px';
+        card.style.overflow = 'hidden';
+        card.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        card.style.backgroundColor = '#fff';
+
+        card.innerHTML = `
+          <img src="${imgURL}" alt="Project Image" style="width:100%; height:auto;">
+          <div style="padding:15px;">
+            <h3 style="margin-top:0;">${title}</h3>
+            <p>${desc}</p>
+          </div>
+        `;
+
+        // Add to gallery
+        gallery.prepend(card);
+
+        // Reset form
+        form.reset();
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+
+</body>
+</html>
+
